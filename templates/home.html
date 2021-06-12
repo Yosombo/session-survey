@@ -1,0 +1,12 @@
+{% extends 'base.html'%} {%block title%} Home{%endblock%} {%block content%}
+<h1>Welcome</h1>
+{%for survey in surveys%}
+<div class="survey_home">
+  <h3>{{survey.title}}</h3>
+  <p>{{survey.instructions}}</p>
+  <!-- <form action="/begin" method="POST"> -->
+  <form action="/begin">
+    <button>Start Survey</button>
+  </form>
+</div>
+{%endfor%} {%endblock%}
